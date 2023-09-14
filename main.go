@@ -18,39 +18,41 @@ func main() {
 
 func rightTriangleStar(num int) {
 
+	var result string
 	if num > 0 {
 		for i := 1; i <= num; i++ {
 			for j := 1; j <= i; j++ {
-				fmt.Printf("*")
+				result += "*"
 			}
-			fmt.Println()
+			result += "\n"
 		}
 	}
-
+	fmt.Printf(result)
 }
 
 func diamondStar(num int) {
 	var i, k, j int
-
+	var result string
 	if num > 0 {
 		for i = 1; i <= num; i++ {
 			for k = num - i; k >= 1 && i != num; k-- {
-				fmt.Printf(" ")
+				result += " "
 			}
 			for j = 1; j < i+i; j++ {
-				fmt.Printf("*")
+				result += "*"
+
 			}
-			fmt.Println()
+			result += "\n"
 		}
 		for i = num - 1; i >= 1; i-- {
 			for k = num - i; k >= 1 && i != num; k-- {
-				fmt.Printf(" ")
+				result += " "
 			}
 			for j = 1; j < i+i; j++ {
-				fmt.Printf("*")
+				result += "*"
 			}
-			fmt.Println()
+			result += "\n"
 		}
 	}
-
+	fmt.Printf(result)
 }
